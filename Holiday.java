@@ -25,5 +25,18 @@ class Holiday
 public class Main {
     public static void main(String[] args) {
         Holiday h = new Holiday("Independence Day ", 4, "July");
+        Holiday m = new Holiday("My Mom Birthday", 31, "July");
+        int n,i;
+        Scanner in = new Scanner(System.in);
+        n=in.nextInt();
+        Holiday []a = new Holiday[n];
+        for(i=0;i<n;i++)
+        {
+            a[i]=new Holiday(in.next(),in.nextInt(),in.next());
+        }
+        double  c = h.avgDate(a);
+        System.out.println(c);
+        boolean b = h.inSameMonth(m);
+        System.out.println(b);
     }
 }
